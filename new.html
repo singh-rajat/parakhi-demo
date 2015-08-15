@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta HTTP-EQUIV="X-UA-COMPATIBLE" CONTENT="IE=EmulateIE9" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WebappPro</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/d3/d3LineChart.css">
+    <link href="css/d3/tipsy.css" rel="stylesheet" type="text/css" />
+    <script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/d3/jquery.tipsy.js"></script>
+
+  </head>
+  <body>
+  <div class="wrapper">
+	<header>
+	  	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+			<div class="navbar-header"> 
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					 <span class="sr-only">Toggle navigation</span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">WebappPro</a>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">	
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#">HELP/SUPPORT</a>
+					</li>
+					<li>
+						<a href="#">SETTINGS</a>
+					</li>
+					<li class="dropdown active">
+						 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/ben.jpg" class="user-image">BEN GARRATT<strong class="caret ml-10"></strong></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">Help</a>
+							</li>
+							<li>
+								<a href="#">Settings</a>
+							</li>
+							<li class="divider">
+							</li>
+							<li>
+								<a href="#">Sign Out</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>				
+		</nav>
+	</header>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-3 sidebar-bg mt--20 p0 ">
+				<div class="btm-bdr p15 left-bdr-dashboard">
+					<a href="#"><img src="img/ben.png">DASHBOARD</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-members">
+					<a href="#"><img src="img/icon.png">MEMBERS</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-tournaments">
+					<a href="#"><img src="img/icon.png">TOURNAMENTS</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-cash">
+					<a href="#"><img src="img/icon.png">CASH GAMES</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-schedule">
+					<a href="#"><img src="img/icon.png ">SCHEDULE</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-leagues">
+					<a href="#"><img src="img/icon.png">LEAGUES</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-blog">
+					<a href="#"><img src="img/icon.png">BLOG</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-pages">
+					<a href="#"><img src="img/icon.png">PAGES</a>
+				</div>
+				<div class="btm-bdr p15 left-bdr-club">
+					<a href="#"><img src="img/icon.png">CLUB INFO</a>
+				</div>
+			</div>
+
+			<div class="col-md-9 sidebar-bdr">
+				<div class="row">
+					<div class="col-md-12 white-bg mt--20 top-bdr">
+						<div class="col-md-6 p15">
+						<i class="fa fa-line-chart fa-fw fa-2x"></i>&nbsp; Club Activity for Club Name
+						</div>
+
+						<div class="col-md-6 p15 text-right">
+						<i class="fa fa-tachometer fa-fw fa-2x"></i>&nbsp; DASHBOARD
+						</div>
+
+					</div>
+				</div>
+				<div class="row mt-30">
+					<div class="col-md-8" style="overflow: hidden;">
+						<!-- <div id="container" style="min-width: 400px; height: 300px; margin: 0 auto"></div> -->
+
+						<button id="button">Redraw</button>
+					    <div id="chart"></div>
+    					<script src="js/d3/d3LineChart.js" type="text/javascript"></script>
+					</div>
+					<div class="col-md-4">
+
+					</div>
+				</div>
+				<div class="row mt-50">
+					<div class="col-md-3 text-center">
+						<h5>Todays Tournaments</h5>
+						<div id="rotator" style="height:200px; width:200px"></div>
+					</div>
+					<div class="col-md-3">
+						<h5>Todays Tournaments</h5>
+						<div id="rotator" style="height:200px; width:200px"></div>
+					</div>
+					<div class="col-md-3">
+						<h5>Todays Tournaments</h5>
+						<div id="rotator" style="height:200px; width:200px"></div>
+					</div>
+					<div class="col-md-3">
+						<h5>Todays Tournaments</h5>
+						<div id="rotator" style="height:200px; width:200px"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 grey-bg p30 bdr-grey">
+						<div class="mb-30 pb-30">
+							<h4 class="pull-left"><b>Next Tournaments</b></h4>
+							<button type="button" class="btn btn-default pull-right"><b>TOURNAMENTS</b></button>
+						</div>
+						<div class="clearfix"></div>
+						<div class="white-bg right-bdr-green p30">
+							<h4><b>Tournament Name Here!</b></h4>
+							<h5>Sun 8am - 8/04/2012</h5>
+							<a href="#">Edit</a>
+						</div>
+					</div>
+
+					<div class="col-md-6 grey-bg p30 bdr-grey">
+						<div class="mb-30 pb-30">
+							<h4 class="pull-left"><b>Latest Members</b></h4>
+							<button type="button" class="btn btn-default pull-right"><b>MEMBERS</b></button>
+						</div>
+						<div class="clearfix"></div>
+						<div class="white-bg right-bdr-blue p30">
+							<img src="img\grey-circle.png" class="pull-left mr-20">
+							<h4><b>John Smith</b></h4>
+							<h5>Membership No. 007</h5>
+							<a href="#">Edit</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div id='outer' style="width: 1000px; height:800px; margin: 0px auto; margin-top:20px; padding:10px;">
+	    <div id="main" style="width:1000px; height:200px; margin: 0px auto; ">
+	        <div id="div1"></div>
+	        <div id="div2"></div>
+	        <div id="div3"></div>
+	        <div id="div4"></div>
+	    </div>
+	</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.cjs/d3om/modules/exporting.js"></script>
+
+  	<script type="text/javascript">
+        $(function() {
+            $('#container').highcharts({
+                title: {
+                    text: 'Active Daily Players',
+                    x: -220 //center
+                },
+                chart: {
+                	backgroundColor: "transparent"
+                },
+                /*subtitle: {
+                    text: 'Source: WorldClimate.com',
+                    x: -20
+                },*/
+                xAxis: {
+                    categories: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri',
+                        'Sat', 'Sun']
+                },
+                yAxis: {
+                    title: {
+                        text: null
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                /*tooltip: {
+                    valueSuffix: '°C'
+                },*/
+                legend: {
+                	enabled: false,
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: [{
+                    data: [50,35,20,40,58,55,40]
+                }]
+            });
+        });
+    </script>
+
+	<script>
+		$(window).load(function () {
+		$("#rotator").rotator();      
+		});
+	</script>
+
+	<script>
+		$(window).load(function () {
+		$("#rotator").rotator({
+		starting: 0,
+		ending: 60,
+		percentage: false,
+		color: '#dd6264',
+		lineWidth: 7,
+		timer: 10,
+		radius: 60,
+		fontStyle: 'Calibri',
+		fontSize: '36pt',
+		fontColor: '#dd6264',
+		backgroundColor: 'transparent',
+		callback: function () {
+		}
+		});       
+		});
+	</script>
+
+	<script language="JavaScript">
+
+	    var div1=d3.select(document.getElementById('div1'));
+	    var div2=d3.select(document.getElementById('div2'));
+	    var div3=d3.select(document.getElementById('div3'));
+	    var div4=d3.select(document.getElementById('div4'));
+
+	    start();
+
+	    function onClick1() {
+	        deselect();
+	        div1.attr("class","selectedRadial");
+	    }
+
+	    function onClick2() {
+	        deselect();
+	        div2.attr("class","selectedRadial");
+	    }
+
+	    function onClick3() {
+	        deselect();
+	        div3.attr("class","selectedRadial");
+	    }
+
+	    function labelFunction(val,min,max) {
+
+	    }
+
+	    function deselect() {
+	        div1.attr("class","radial");
+	        div2.attr("class","radial");
+	        div3.attr("class","radial");
+	    }
+
+	    function start() {
+
+	        var rp1 = radialProgress(document.getElementById('div1'))
+	                .label("RADIAL 1")
+	                .onClick(onClick1)
+	                .diameter(150)
+	                .value(78)
+	                .render();
+
+	        var rp2 = radialProgress(document.getElementById('div2'))
+	                .label("RADIAL 2")
+	                .onClick(onClick2)
+	                .diameter(150)
+	                .value(132)
+	                .render();
+
+	        var rp3 = radialProgress(document.getElementById('div3'))
+	                .label("RADIAL 3")
+	                .onClick(onClick3)
+	                .diameter(150)
+	                .minValue(100)
+	                .maxValue(200)
+	                .value(150)
+	                .render();
+
+	    }
+	</script>
+
+	<script type="text/javascript" src="js/d3/d3.min.js"></script>
+    <script type="text/javascript" src="js/d3/radialProgress.js"></script>
+
+    
+
+  </div>
+  </body>
+</html>

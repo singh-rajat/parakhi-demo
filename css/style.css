@@ -1,0 +1,319 @@
+body{
+	background-color: #f2f2f0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: serif;
+}
+
+*{
+	font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #777779;    
+}
+
+a, a:hover{
+	text-decoration: none;
+	color: #df6162;
+}
+
+.p0{
+	padding: 0;
+}
+
+.m10{
+	margin: 10px;
+}
+
+.mr-10{
+	margin-right: 10px;
+}
+
+.mr-20{
+	margin-right: 20px;
+}
+
+.mt--20{
+	margin-top: -20px;
+}
+
+.mt-20{
+	margin-top: 20px;
+}
+
+.mt-30{
+	margin-top: 30px;
+}
+
+.mt-50{
+	margin-top: 50px;
+}
+
+.mb-30{
+	margin-bottom: 30px;
+}
+
+.ml-10{
+	margin-left: 10px;
+}
+
+.ml-30{
+	margin-left: 30px;
+}
+
+.mr-30{
+	margin-right: 30px;
+}
+
+.mb-50{
+	margin-bottom: 50px;
+}
+
+.p15{
+	padding: 15px;
+}
+
+.p30{
+	padding: 30px;
+}
+
+.pt-30{
+	padding-top: 30px;
+}
+
+.pb-30{
+	padding-bottom: 30px;
+}
+
+.btm-bdr{
+	border-bottom: 1px solid #cacaca;
+
+}
+
+.left-bdr-dashboard{
+	border-left: 7px solid #de6262;
+	border-radius: 0;
+}
+
+.left-bdr-members{
+	border-left: 7px solid #88bce0;
+}
+
+.left-bdr-tournaments{
+	border-left: 7px solid #6fc681;
+}
+
+.left-bdr-cash{
+	border-left: 7px solid #9d61dd;
+}
+
+.left-bdr-schedule{
+	border-left: 7px solid #8893e0;
+}
+
+.left-bdr-leagues{
+	border-left: 7px solid #dca761;
+}
+
+.left-bdr-blog{
+	border-left: 7px solid #aa6e70;
+}
+
+.left-bdr-pages{
+	border-left: 7px solid #71a59c;
+}
+
+.left-bdr-club{
+	border-left: 7px solid #727272;
+}
+
+.sidebar-bg{
+	background-color: #f2f2ea;
+}
+
+.sidebar-bdr{
+	border-left: 1px solid #d4d4ca;
+}
+
+.white-bg{
+	background-color: #fff;
+}
+
+.top-bdr{
+	border-top: 10px solid #dd6264;
+}
+
+.grey-bg{
+	background-color: #eaeae2;
+}
+
+.right-bdr-green{
+	border-right: 7px solid #71c780;
+}
+
+.right-bdr-blue{
+	border-right: 7px solid #64aadd;
+}
+
+.bdr-grey{
+	border: 1px solid #d4d4ca;
+}
+
+.navbar{
+	border-radius: 0;
+}
+
+/*.container-fluid{
+	padding: 0;
+}*/
+
+.bdr-grey .btn{
+	background: transparent;
+}
+
+.user-image {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.list-group-item:first-child, .list-group-item:last-child {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.list-group-item {
+	height: 60px;
+	border: 0 0 1px 0 solid #d4d4ca;
+    position: relative;
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: -1px;
+    background-color: #f2f2ea;
+    transition: width 0.5s linear;
+}
+
+a.list-group-item:hover{
+	width: 500px;
+}
+
+.dis-inline{
+	display: inline;
+}
+
+.pos-relative{
+	position: relative;
+}
+
+.align{
+	position: absolute;
+	top: 50%;
+	bottom: 50;
+}
+
+.arrow_box {
+	position: relative;
+	background: #fff;
+	border-bottom: 1px solid #d4d4ca;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 5%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #fff;
+	border-width: 10px;
+	margin-left: -20px;
+}
+.arrow_box:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #cacaca;
+	border-width: 11px;
+	margin-left: -21px;
+}
+
+.rotator-size{
+	height:200px; 
+	width:200px;
+	margin: 50px auto 0px auto;
+}
+
+.image {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+h5{
+	color: #8c8c8a;
+}
+
+#test .arc2 {
+	stroke-weight:0.1;
+	fill: #3660b0;
+}
+
+#outer {
+	background:#FFFFFF;
+	border-radius: 5px;
+	color: #000;
+}
+
+#div1, #div2, #div3, #div4 {
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	float: left;
+}
+
+#div1 .arc {
+	stroke-weight: 0.1;
+	fill: #de6262;
+}
+
+#div2 .arc {
+	stroke-weight: 0.1;
+	fill: red;
+}
+
+#div3 .arc {
+	stroke-weight: 0.1;
+	fill: #1d871b;
+}
+
+#div4 .arc {
+	stroke-weight: 0.1;
+	fill: blue;
+}
+
+.selectedRadial {
+	border-radius: 3px;
+	background: #f4f4f4;
+	color: #000;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	border: 1px solid rgba(200,200,200,0.85);
+}
+
+.radial {
+	border-radius: 3px;
+	background: #FFFFFF;
+	color: #000;
+}
+
+.red{
+	color: #de6262;
+}
