@@ -8,10 +8,7 @@
     <title>WebappPro</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- D3 -->
-    <link type="text/css" rel="stylesheet" href="css/d3style.css">
+    <link href="css/new.css" rel="stylesheet">
 
     <!-- font awesome css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -19,37 +16,6 @@
     <!-- Google font -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <!-- Morris Chart CSS -->
-    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.5.1.css">
-
-    <!-- D3 line chart -->
-    <link rel="stylesheet" type="text/css" href="css/d3/d3LineChart.css">
-    <link href="css/d3/tipsy.css" rel="stylesheet" type="text/css" />
-
-
-    <style>
-        .axis path,
-        .axis line {
-            fill: none;
-            stroke: #000;
-            shape-rendering: crispEdges;
-        }
-
-        .x.axis path {
-            display: none;
-        }
-
-        .line {
-            fill: none;
-            stroke: steelblue;
-            stroke-width: 1.5px;
-        }
-
-        .legend rect {
-            fill:white;
-            stroke:black;
-            opacity:0.8;}
-    </style>
 </head>
 <body>
 <div class="wrapper">
@@ -99,40 +65,67 @@
             <div class="col-md-12" style="padding-right: 0;">
                 <div class="col-md-3 sidebar-bg mt--20 p0 ">
                     <div class="list-group">
-                        <a class="list-group-item left-bdr-dashboard" href="#">
-                            <i class="fa fa-tachometer fa-fw fa-2x mr-30"></i>&nbsp; <b>DASHBOARD</b>
+                        <a class="list-group-item dashboard selected" href="#">
+                        <div class="icon">
+                            <i class="fa fa-tachometer fa-fw fa-2x white"></i>
+                        </div>
+                            &nbsp; <b>DASHBOARD</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-members" href="#">
-                            <i class="fa fa-user fa-fw fa-2x mr-30"></i>&nbsp; <b>MEMBERS</b>
+                        <a class="list-group-item members" href="#">
+                            <div class="icon">
+                                <i class="fa fa-user fa-fw fa-2x"></i>
+                            </div>
+                            &nbsp; <b>MEMBERS</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-tournaments" href="#">
-                            <i class="fa fa-trophy fa-fw fa-2x mr-30"></i>&nbsp; <b>TOURNAMENTS</b>
+                        <a class="list-group-item tournaments" href="#">
+                        <div class="icon">
+                            <i class="fa fa-trophy fa-fw fa-2x"></i>
+                        </div>
+                            &nbsp; <b>TOURNAMENTS</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-cash" href="#">
-                            <i class="fa fa-money fa-fw fa-2x mr-30"></i>&nbsp; <b>CASH GAMES</b>
+                        <a class="list-group-item cash" href="#">
+                        <div class="icon">
+                            <i class="fa fa-money fa-fw fa-2x"></i>
+                        </div>
+                            &nbsp; <b>CASH GAMES</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-schedule" href="#">
-                            <i class="fa fa-calendar-o fa-fw fa-2x mr-30"></i>&nbsp; <b>SCHEDULE</b>
+                        <a class="list-group-item schedule" href="#">
+                        <div class="icon">
+                            <i class="fa fa-calendar-o fa-fw fa-2x"></i>
+                        </div>
+                            &nbsp; <b>SCHEDULE</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-leagues" href="#">
-                            <i class="fa fa-align-justify fa-fw fa-2x mr-30"></i>&nbsp; <b>LEAGUES</b>
+                        <a class="list-group-item leagues" href="#">
+                        <div class="icon">
+                            <i class="fa fa-align-justify fa-fw fa-2x "></i>
+                        </div>    
+                        &nbsp; <b>LEAGUES</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-blog" href="#">
-                            <i class="fa fa-rss fa-fw fa-2x mr-30"></i>&nbsp; <b>BLOG</b>
+                        <a class="list-group-item blog" href="#">
+                        <div class="icon">
+                            <i class="fa fa-rss fa-fw fa-2x "></i>
+                        </div>
+                            &nbsp; <b>BLOG</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-pages" href="#">
-                            <i class="fa fa-file-o fa-fw fa-2x mr-30"></i>&nbsp; <b>PAGES</b>
+                        <a class="list-group-item pages" href="#">
+                        <div class="icon">
+                            <i class="fa fa-file-o fa-fw fa-2x "></i>
+                        </div>
+                            &nbsp; <b>PAGES</b>
                         </a>
 
-                        <a class="list-group-item left-bdr-club" href="#">
-                            <i class="fa fa-info fa-fw fa-2x mr-30"></i>&nbsp; <b>CLUB INFO</b>
+                        <a class="list-group-item club" href="#">
+                        <div class="icon">
+                            <i class="fa fa-info fa-fw fa-2x "></i>
+                        </div>
+                        &nbsp; <b>CLUB INFO</b>
                         </a>
                     </div>
                 </div>
@@ -140,48 +133,56 @@
                 <div class="col-md-9 sidebar-bdr">
                     <div class="row">
                         <div class="col-md-12 mt--20 top-bdr arrow_box">
-                            <div class="col-md-6 p15">
-                                <i class="fa fa-line-chart fa-fw fa-2x "></i>&nbsp; <h4 class="dis-inline">Club Activity for Club Name</h4>
+                            <div class="col-md-10 p15">
+                                <i class="fa fa-line-chart fa-fw fa-2x"></i>&nbsp; <h4 class="dis-inline">Club Activity for Club Name</h4>
                             </div>
 
-                            <div class="col-md-6 p15 text-right">
-                                <i class="fa fa-tachometer fa-fw fa-2x red"></i>&nbsp; <span class="red">DASHBOARD</span>
+                            <div class="col-md-2 p15">
+                                <i class="fa fa-tachometer fa-fw fa-2x grey-yellow v-align"></i>&nbsp; <span class="grey-yellow">DASHBOARD</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row mt-30">
                         <h4 class="mb-30 ml-30"><b>ACTIVE DAILY PLAYERS</b></h4>
-                        <div class="col-md-8 col-xs-12">
-                            <div id="chart"></div>
-                        </div>
+                        <div class="col-md-8" id="container" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
 
                         <div class="col-md-4">
-                            <div><i class="fa fa-trophy fa-fw fa-lg"></i>&nbsp; <h1 class="dis-inline"><b>14</b></h1></div>
-                            <div id="d3_donut"></div>
-                            <!--<div id="donut" class="rotator-size mt-50"></div>-->
+                            <div class="col-md-12">
+                                <div class="col-md-5 mb-20">
+                                    <i class="fa fa-trophy fa-fw fa-lg"></i>
+                                    &nbsp;
+                                    <h2 class="dis-inline">
+                                        <b>14</b>
+                                    </h2>
+                                </div>
 
+                                <div id="container3" class="col-md-7" style="min-width: 160px; height: 50px; margin: 0 auto">   
+                                </div>
+                            </div>
+
+                            <div id="containers" class="col-md-12" style="min-width: 210px; height: 200px; margin: 0 auto"></div>
                         </div>
                     </div>
 
                     <div class="row mt-50">
                         <div class="col-md-3 text-center">
-                            <h5 class="mb-50"><b>Todays Tournaments</b></h5>
-                            <div id="div1"></div>
+                            <h5 class=""><b>Todays Tournaments</b></h5>
+                            <canvas class="loader2"></canvas>                            
                         </div>
 
                         <div class="col-md-3 text-center">
-                            <h5 class="mb-50"><b>Active players</b></h5>
-                            <div id="div2"></div>
+                            <h5 class=""><b>Active players</b></h5>
+                            <canvas class="loader3"></canvas>
                         </div>
 
                         <div class="col-md-3 text-center">
-                            <h5 class="mb-50"><b>Weekly players</b></h5>
-                            <div id="div3"></div>
+                            <h5 class=""><b>Weekly players</b></h5>
+                            <canvas class="loader4"></canvas>
                         </div>
                         <div class="col-md-3 text-center">
-                            <h5 class="mb-50"><b>Cash Games</b></h5>
-                            <div id="div4"></div>
+                            <h5 class=""><b>Cash Games</b></h5>
+                            <canvas class="loader5"></canvas>
                         </div>
                     </div>
 
@@ -222,77 +223,219 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
 
+
+<!-- Highcharts Area Chart -->
+<script type="text/javascript">
+    $(function () {
+    $('#container').highcharts({
+        title: {
+            text: '',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat',
+                'Sun']
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#000'
+            }]
+        },
+        legend: {
+            enabled: false
+        },
+        /*tooltip: {
+            valueSuffix: '°C'
+        },*/
+        /*legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },*/
+        chart:{
+            backgroundColor: 'transparent'
+        },
+        credits: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        series: [{
+            type:'area',
+            name: 'Players',
+            data: [20, 10, 14, 19, 30, 22, 36]
+        }]
+    });
+});
+</script>
+
+<!-- Highcharts Donut Chart -->
+<script type="text/javascript">
+    $(function() {
+        // Create the chart
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'containers',
+                type: 'pie',
+                backgroundColor: 'transparent'
+            },
+            title: {
+                text: ''
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            plotOptions: {
+                pie: {
+                    shadow: true
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+                }
+            },
+            legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+            },
+            series: [{
+                name: 'Title',
+                data: [["Tournaments",6],["Cash Game",4],["League",7],["Misc",7]],
+                size: '60%',
+                innerSize: '50%',
+                showInLegend:true,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        });
+    });
+</script>
+
+<!-- Highcharts Bar chart -->
+<script type="text/javascript">
+    $(function () {
+        $('#container3').highcharts({
+            chart: {
+                type: 'column',
+                backgroundColor: 'transparent'
+            }, 
+            xAxis: {
+                labels:
+                {
+                    enabled: false
+                }
+            },
+            yAxis: {
+                labels:
+                {
+                    enabled: false
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            exporting: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'percent'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            series: [{
+                name: 'tournaments',
+                data: [5, 3, 4, 7]
+            }, {
+                name: 'Cash League',
+                data: [2, 2, 3, 1]
+            }]
+        });
+    });
+</script>
+
 <!-- Highcharts -->
 <script src="js/highcharts.js"></script>
 <script src="js/exporting.js"></script>
 
-<!-- D3 -->
-<script type="text/javascript" src="js/d3/d3.min.js"></script>
-<script type="text/javascript" src="js/d3/radialProgress.js"></script>
-<script type="text/javascript" src="js/d3/jquery.tipsy.js"></script>
-<script type="text/javascript" src="js/d3/d3LineChart.js"></script>
-<script type="text/javascript" src="js/d3/d3DonutChart.js"></script>
+<!-- Radial -->
+<script src="js/jquery.classyloader.min.js"></script>
 
-<!-- Morris Chart -->
-<script src="js/raphael-min.js"></script>
-<script src="js/morris-0.5.1.min.js"></script>
-
-<!-- highcharts -->
 <script type="text/javascript">
-
-    /*line chart*/
-    $(document).ready(function() {
-        draw();
-
-        drawRadialChart();
+        $(document).ready(function() {
+        $('.loader2').ClassyLoader({
+            percentage: 60,
+            speed: 8,
+            diameter: 60,
+            fontSize: '20px',
+            showText: false,
+            roundedLine: true,
+            fontColor: 'rgba(73, 125, 164, 0.3)',
+            lineColor: 'rgba(73, 125, 164, 1)',
+            remainingLineColor: 'rgba(73, 125, 164, 0.1)',
+            lineWidth: 20
+        });
+        $('.loader3').ClassyLoader({
+            speed: 40,
+            fontSize: '36px',
+            diameter: 60,
+            fontFamily: 'Georgia',
+            fontColor: 'rgba(0,0,0,0.4)',
+            lineColor: 'rgba(255,0,0,0.4)',
+            lineWidth: 1,
+            remainingLineColor: 'rgba(0,0,0,0.1)'
+        });
+        $('.loader4').ClassyLoader({
+            speed: 20,
+            diameter: 60,
+            fontSize: '20px',
+            fontFamily: 'Georgia',
+            fontColor: 'rgba(0,0,0,0.4)',
+            lineColor: 'rgba(0,0,0,0.4)',
+            percentage: 34,
+            remainingLineColor: 'rgba(0,0,0,0.1)'
+        });
+        $('.loader5').ClassyLoader({
+            speed: 100,
+            diameter: 60,
+            fontSize: '30px',
+            fontFamily: 'Courier',
+            fontColor: 'rgba(0,0,0,0.4)',
+            lineColor: 'rgba(255,175,255,0.7)',
+            percentage: 80,
+            lineWidth: 20,
+            remainingLineColor: 'rgba(200,200,200,0.1)'
+        });
     });
-
-    /*D3 Radial*/
-    var div1=d3.select(document.getElementById('div1'));
-    var div2=d3.select(document.getElementById('div2'));
-    var div3=d3.select(document.getElementById('div3'));
-    var div4=d3.select(document.getElementById('div4'));
-
-    function drawRadialChart() {
-
-        var rp1 = radialProgress(document.getElementById('div1'))
-                .diameter(150)
-                .value(79)
-                .render();
-
-        var rp2 = radialProgress(document.getElementById('div2'))
-                .diameter(150)
-                .value(40)
-                .render();
-
-        var rp3 = radialProgress(document.getElementById('div3'))
-                .label("RADIAL 3")
-                .diameter(150)
-                .minValue(0)
-                .maxValue(10)
-                .value(6)
-                .render();
-
-        var rp4 = radialProgress(document.getElementById('div4'))
-                .label("RADIAL 4")
-                .diameter(150)
-                .minValue(0)
-                .maxValue(10)
-                .value(7.8)
-                .render();
-    }
-
-    /*Morris Donut*/
-    Morris.Donut({
-        element: 'donut',
-        data: [
-            {label: "Tournaments", value: 12},
-            {label: "Cash Game", value: 30},
-            {label: "League", value: 20}
-        ]
-    });
-
-</script>
+</script> 
 
 </body>
 </html>
